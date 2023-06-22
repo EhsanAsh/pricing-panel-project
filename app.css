@@ -56,8 +56,11 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 100vh; /*100% of the viewport height*/
 }
+
+/*from now on, we will set everything based on mobile-first approach. it means that we will set the styles for mobile devices first and then we will add media queries for bigger screens*/
+/*if we concider the portrate mode of small phones to be less than 576px, then we will set the styles for that first*/
 .panel{
     background-color: white;
 	border-radius: 10px;
@@ -65,4 +68,18 @@ body{
 	width:100%;
 	max-width: 960px;
 	display: flex;
+	flex-direction: column;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.pricing-plan{
+	border-bottom: solid 1px #e1f1ff;
+}
+.pricing-plan:last-child{
+	border-bottom: none;
+}
+.pricing-img{
+	margin-bottom: 25px;
+	max-width: 100%;
 }
